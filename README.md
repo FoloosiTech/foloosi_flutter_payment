@@ -29,7 +29,16 @@ import 'package:foloosi_flutter_payment/foloosi_flutter_payment.dart';
 
 ## Basic Usage
 ```dart
-),
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Foloosi Payment Flutter',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: MyHomePage(),
     );
   }
