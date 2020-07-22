@@ -29,6 +29,12 @@ import 'package:foloosi_flutter_payment/foloosi_flutter_payment.dart';
 
 ## Basic Usage
 ```dart
+),
+      home: MyHomePage(),
+    );
+  }
+}
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key}) : super(key: key);
 
@@ -37,10 +43,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-
-bool proceedToPayment = false;
+  bool proceedToPayment = false;
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   void _proceeedToPayment() {
     setState(() {
@@ -59,13 +63,11 @@ bool proceedToPayment = false;
             ),
       body: proceedToPayment
           ? FoloosiPayment(
-              headerText: 'Foloosi Payment',
-              successRoute: '/OrderSuccess',
-              successRouteParam: 'Foloosi',
+              headerText: "Foloosi Payment",
               loaderText: "Processing Request",
-              merchantKey: 'YOUR_FOLOOSI_MERCHANT_KEY',
-              secretKey: 'YOUR_FOLOOSI_SECRET_KEY',
-              transactionAmount: 2000,
+              merchantKey: 'YOUR_MERCHANT_KEY',
+              secretKey: 'YOUR_SECRET_KEY',
+              transactionAmount: 2000, // Transaction Value
               currency: 'AED',
               customerName: 'Omar Ali',
               customerEmail: 'tech@foloosi.com',
