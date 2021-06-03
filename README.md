@@ -21,7 +21,7 @@ A Flutter plugin for making payments via Foloosi Payment Gateway. Fully supports
 In the `dependencies:` section of your `pubspec.yaml`, add the following line:
 
 ```yaml
-foloosi_flutter_payment: ^1.0.1
+foloosi_flutter_payment: ^1.0.4
 ```
 
 Import in your project:
